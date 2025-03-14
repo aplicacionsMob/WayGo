@@ -2,7 +2,7 @@
 Repositori per a l'aplicació desenvolupada a l'assignatura Aplicacions Mobils.
 
 
-WayGo és una aplicació de viatges dissenyada en **Kotlin** que té com a objectiu facilitar la planificació i gestió de viatges per als usuaris. Amb una interfície intuïtiva i funcionalitats innovadores, WayGo ofereix una experiència optimitzada per als viatgers moderns.
+WayGo és una aplicació de viatges dissenyada en **Kotlin** que té com a objectiu facilitar la planificació i gestió de viatges per als usuaris. Amb una interfície intuïtiva i funcionalitats innovadores, WayGo ofereix una experiència optimitzada per als aventurers.
 
 ## Característiques
 - Planificació de viatges personalitzada
@@ -17,7 +17,7 @@ Aquest projecte ha estat desenvolupat per:
 
 ## Tecnologies Utilitzades
 - **Llenguatge:** Kotlin
-- **Plataforma:** Android
+- **Plataforma:** Android Studio
 - **Frameworks i Llibreries:** (A completar segons les llibreries utilitzades)
 
 ## Instal·lació

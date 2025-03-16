@@ -71,12 +71,12 @@ fun HomeScreenMenu(
 
                     Text("Section 1", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
-                        label = { Text("Item 1") },
+                        label = { Text("Viatge 1") },
                         selected = false,
                         onClick = { /* Handle click */ }
                     )
                     NavigationDrawerItem(
-                        label = { Text("Item 2") },
+                        label = { Text("Viatge 2") },
                         selected = false,
                         onClick = { /* Handle click */ }
                     )

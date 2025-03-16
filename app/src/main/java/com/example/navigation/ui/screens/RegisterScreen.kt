@@ -79,10 +79,17 @@ fun RegisterScreen(navController: NavController) {
                 .align(Alignment.BottomEnd), // Alinea el contingut a baix a la dreta
             verticalAlignment = Alignment.CenterVertically // Centra verticalment el text i el botó
         ) {
+
             Text(text = "Ja tens compte?")
             Spacer(modifier = Modifier.width(8.dp)) // Espai entre el text i el botó
             Button(onClick = { navController.navigate("login") }) {
                 Text(text = "Login")
+            }
+        }
+        Row {
+            Spacer(modifier = Modifier.width(8.dp))
+            Button(onClick = { navController.navigate("terms") }) {
+                Text(text = "Term and conditions")
             }
         }
     }

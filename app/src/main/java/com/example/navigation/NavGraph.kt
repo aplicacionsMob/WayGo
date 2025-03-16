@@ -17,6 +17,8 @@ import com.example.navigation.ui.screens.HomeScreen
 import com.example.navigation.ui.screens.HomeScreenMenu
 import com.example.navigation.ui.screens.LoginScreen
 import com.example.navigation.ui.screens.ProfileScreen
+import com.example.navigation.ui.screens.RegisterScreen
+
 
 //@Composable
 //fun NavGraph(navController: NavHostController) {
@@ -53,5 +55,6 @@ fun NavGraph(navController: NavHostController) {
             ProfileScreen(navController, userId)
         }
         composable("profileMenu") { ProfileScreen(navController, null) }
+        composable("register") { RegisterScreen(navController) }
     }
 }

@@ -13,7 +13,6 @@ import androidx.navigation.NavController
 fun HomeScreen(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Home Screen")

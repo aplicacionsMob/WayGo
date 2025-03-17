@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -18,6 +19,25 @@ import androidx.navigation.NavController
 
 @Composable
 fun Content1(navController: NavController, paddingValues: PaddingValues) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp) // Afegeix un petit marge
+    ) {
+        Row(
+            modifier = Modifier
+                .align(Alignment.BottomEnd), // Alinea el contingut a baix a la dreta
+            verticalAlignment = Alignment.CenterVertically // Centra verticalment el text i el botó
+        ) {
+            Button(onClick = {
+                // Navigate to the Register screen
+                navController.navigate("about")
+            }) {
+                Text(text = "About Us")
+            }
+        }
+    }
+
     Box(modifier = Modifier.padding(paddingValues)) {
         Column(
             modifier = Modifier

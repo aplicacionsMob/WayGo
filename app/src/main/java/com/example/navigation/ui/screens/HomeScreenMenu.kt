@@ -109,6 +109,14 @@ fun HomeScreenMenu(
                         onClick = { /* Handle click */ },
                     )
                     Spacer(Modifier.height(12.dp))
+
+                    Button(onClick = {
+                        navController.navigate("terms") {
+                            popUpTo("terms") { inclusive = true }
+                        }
+                    }) {
+                        Text(text = "Terms and Conditions")
+                    }
                 }
             }
         },

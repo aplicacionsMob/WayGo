@@ -26,6 +26,7 @@ import com.example.navigation.ui.screens.ToDoListScreen
 import com.example.navigation.ui.screens.TravelCreatorScreen
 import com.example.navigation.ui.screens.TravelScreen1
 import com.example.navigation.ui.screens.TravelScreen2
+import com.example.navigation.ui.screens.HelpScreen
 
 
 @Composable
@@ -54,5 +55,6 @@ fun NavGraph(navController: NavHostController) {
         composable("settings") { SettingsScreen(navController) }
         composable("travel1") { TravelScreen1(navController) }
         composable("travel2") { TravelScreen2(navController) }
+        composable("help") { HelpScreen(navController) }
     }
 }

@@ -115,7 +115,10 @@ fun HomeScreenMenu(
                         label = { Text("Help and feedback") },
                         selected = false,
                         icon = { Icon(Icons.AutoMirrored.Outlined.Help, contentDescription = null) },
-                        onClick = { /* Handle click */ },
+                        onClick = {
+                            navController.navigate("help") {
+                                popUpTo("help") { inclusive = true } }
+                        }
                     )
                     Spacer(Modifier.height(12.dp))
 

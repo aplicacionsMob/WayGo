@@ -59,5 +59,12 @@ fun CostsScreen(navController: NavController) {
         Button(onClick = { /* Handle save action */ }) {
             Text(text = "Save Costs")
         }
+        Button(onClick = {
+            navController.navigate("home") {
+                popUpTo("back") { inclusive = true }
+            }
+        }) {
+            Text(text = "Back")
+        }
     }
 }

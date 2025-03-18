@@ -50,5 +50,12 @@ fun ToDoListScreen(navController: NavController) {
                 Text(text = task, modifier = Modifier.padding(8.dp))
             }
         }
+        Button(onClick = {
+            navController.navigate("home") {
+                popUpTo("back") { inclusive = true }
+            }
+        }) {
+            Text(text = "Back")
+        }
     }
 }

@@ -63,5 +63,13 @@ fun TravelCreatorScreen(navController: NavController) {
         } }) {
             Text(text = "Save Trip")
         }
+
+        Button(onClick = {
+            navController.navigate("home") {
+                popUpTo("back") { inclusive = true }
+            }
+        }) {
+            Text(text = "Back")
+        }
     }
 }

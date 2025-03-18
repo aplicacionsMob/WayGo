@@ -25,23 +25,6 @@ import com.example.navigation.ui.screens.ToDoListScreen
 import com.example.navigation.ui.screens.TravelCreatorScreen
 
 
-//@Composable
-//fun NavGraph(navController: NavHostController) {
-//    NavHost(navController = navController, startDestination = "login") {
-//        composable("login") { LoginScreen(navController) }
-//        composable("home") { HomeScreen(navController) }
-//        composable("profile") { ProfileScreen(navController, null) }
-//        composable("profile/{id}",
-//                arguments = listOf(navArgument("id"){
-//                            type = NavType.IntType
-//                })
-//        ) {
-//            var userId = it.arguments?.getInt("id") ?: -1
-//            ProfileScreen(navController, userId)
-//        }
-//    }
-//}
-
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -66,5 +49,6 @@ fun NavGraph(navController: NavHostController) {
         composable("creator") { TravelCreatorScreen(navController) }
         composable("cost") { CostsScreen(navController) }
         composable("todo") { ToDoListScreen(navController) }
+
     }
 }

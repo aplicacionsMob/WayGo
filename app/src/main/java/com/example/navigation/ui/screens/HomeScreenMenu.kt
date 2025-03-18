@@ -31,23 +31,6 @@ import androidx.navigation.NavController
 import com.google.rpc.Help
 import kotlinx.coroutines.launch
 
-//@Composable
-//fun HomeScreen(navController: NavController) {
-//    Column(
-//        modifier = Modifier.fillMaxSize(),
-//        verticalArrangement = Arrangement.Center,
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        Text(text = "Home Screen")
-//        Spacer(modifier = Modifier.height(20.dp))
-//        Button(onClick = {
-//            // Navigate to the Profile screen
-//            navController.navigate("profile")
-//        }) {
-//            Text(text = "Go to Profile")
-//        }
-//    }
-//}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

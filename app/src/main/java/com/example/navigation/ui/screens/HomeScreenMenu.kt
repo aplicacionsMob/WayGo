@@ -69,12 +69,18 @@ fun HomeScreenMenu(
                     Text("My Title", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleLarge)
                     HorizontalDivider()
                     Button(onClick = {
-                        // Navigate to Home and remove Login from the back stack
                         navController.navigate("creator") {
                             popUpTo("creator") { inclusive = true }
                         }
                     }) {
                         Text(text = "Travel Creator")
+                    }
+                    Button(onClick = {
+                        navController.navigate("cost") {
+                            popUpTo("cost") { inclusive = true }
+                        }
+                    }) {
+                        Text(text = "Cost Estimation")
                     }
                     Text("Section 1", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(

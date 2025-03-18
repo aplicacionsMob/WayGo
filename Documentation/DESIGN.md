@@ -54,5 +54,6 @@ classDiagram
    Trip "1" -- "*" ItineraryItem : contains
    Trip "1" -- "*" Photo : stores
 
+![Untitled diagram-2025-03-18-200524](https://github.com/user-attachments/assets/cf27d003-977c-4cdd-a0cc-cf6f84da4d5a)
 
    

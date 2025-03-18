@@ -20,6 +20,7 @@ import com.example.navigation.ui.screens.ProfileScreen
 import com.example.navigation.ui.screens.RegisterScreen
 import com.example.navigation.ui.screens.TermConditionsScreen
 import com.example.navigation.ui.screens.AboutScreen
+import com.example.navigation.ui.screens.TravelCreatorScreen
 
 
 //@Composable
@@ -60,5 +61,6 @@ fun NavGraph(navController: NavHostController) {
         composable("register") { RegisterScreen(navController) }
         composable("terms") { TermConditionsScreen(navController) }
         composable("about") { AboutScreen(navController) }
+        composable("creator") { TravelCreatorScreen(navController) }
     }
 }

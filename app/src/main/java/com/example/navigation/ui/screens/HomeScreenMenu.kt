@@ -75,6 +75,9 @@ fun HomeScreenMenu(
                     }) {
                         Text(text = "Travel Creator")
                     }
+
+                    Spacer(Modifier.height(12.dp))
+
                     Button(onClick = {
                         navController.navigate("cost") {
                             popUpTo("cost") { inclusive = true }
@@ -82,6 +85,18 @@ fun HomeScreenMenu(
                     }) {
                         Text(text = "Cost Estimation")
                     }
+
+                    Spacer(Modifier.height(12.dp))
+
+                    Button(onClick = {
+                        navController.navigate("todo") {
+                            popUpTo("todo") { inclusive = true }
+                        }
+                    }) {
+                        Text(text = "To-Do List")
+                    }
+
+                    Spacer(Modifier.height(12.dp))
                     Text("Section 1", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
                         label = { Text("Viatge 1") },
@@ -141,23 +156,3 @@ fun HomeScreenMenu(
     }
 }
 
-//@Composable
-//fun HomeScreenMenuExample() {
-//    // Add more examples here in future if necessary.
-//
-//    HomeScreenMenu { innerPadding ->
-//        Box(modifier = Modifier.padding(innerPadding)) {
-//            Text(
-//                "Swipe from left edge or use menu icon to open the dismissible drawer",
-//                modifier = Modifier.padding(16.dp)
-//            )
-//        }
-//    }
-//}
-
-
-//@Preview
-//@Composable
-//fun HomeScreenMenuPreview() {
-//    HomeScreenMenuExample()
-//}

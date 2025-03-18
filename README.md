@@ -12,7 +12,7 @@ WayGo és una aplicació de viatges dissenyada en **Kotlin** que té com a objec
 
 ## Equip de Desenvolupament
 Aquest projecte ha estat desenvolupat per:
-- **Martí Farran **
+- **Martí Farran**
 - **Nígel Boada**
 
 ## Tecnologies Utilitzades

@@ -53,3 +53,6 @@ classDiagram
 
    Trip "1" -- "*" ItineraryItem : contains
    Trip "1" -- "*" Photo : stores
+
+
+   

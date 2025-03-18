@@ -100,7 +100,10 @@ fun HomeScreenMenu(
                         selected = false,
                         icon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                         badge = { Text("20") }, // Placeholder
-                        onClick = { /* Handle click */ }
+                        onClick = {
+                            navController.navigate("settings") {
+                                popUpTo("settings") { inclusive = true } }
+                        }
                     )
                     NavigationDrawerItem(
                         label = { Text("Help and feedback") },

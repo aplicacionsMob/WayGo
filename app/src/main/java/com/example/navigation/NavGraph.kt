@@ -21,6 +21,7 @@ import com.example.navigation.ui.screens.RegisterScreen
 import com.example.navigation.ui.screens.TermConditionsScreen
 import com.example.navigation.ui.screens.AboutScreen
 import com.example.navigation.ui.screens.CostsScreen
+import com.example.navigation.ui.screens.SettingsScreen
 import com.example.navigation.ui.screens.ToDoListScreen
 import com.example.navigation.ui.screens.TravelCreatorScreen
 
@@ -49,6 +50,7 @@ fun NavGraph(navController: NavHostController) {
         composable("creator") { TravelCreatorScreen(navController) }
         composable("cost") { CostsScreen(navController) }
         composable("todo") { ToDoListScreen(navController) }
+        composable("settings") { SettingsScreen(navController) }
 
     }
 }

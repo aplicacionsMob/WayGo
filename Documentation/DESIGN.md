@@ -1,9 +1,9 @@
-# 📌 Model de Dades
+# Model de Dades
 
 Aquest document descriurà el model de dades que hem fet servir en la nostra aplicació, incloent-hi les principals entitats i les relacions que tinguin entre elles.
 
 
-## 🛠️ **Diagrama del Model de Dades**
+## Diagrama del Model de Dades
 
 classDiagram
     class User {

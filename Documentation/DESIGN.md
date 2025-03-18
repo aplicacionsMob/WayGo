@@ -1,9 +1,9 @@
-# 📌 Model de Dades
+# Model de Dades
 
 Aquest document descriurà el model de dades que hem fet servir en la nostra aplicació, incloent-hi les principals entitats i les relacions que tinguin entre elles.
 
 
-## 🛠️ **Diagrama del Model de Dades**
+## Diagrama del Model de Dades
 
 classDiagram
     class User {
@@ -54,5 +54,8 @@ classDiagram
    Trip "1" -- "*" ItineraryItem : contains
    Trip "1" -- "*" Photo : stores
 
+   A continuació hi ha adjuntada una imatge amb el diagrama de les data class desenvolupades al editor Mermaid:
+
+![Untitled diagram-2025-03-18-200524](https://github.com/user-attachments/assets/cf27d003-977c-4cdd-a0cc-cf6f84da4d5a)
 
    

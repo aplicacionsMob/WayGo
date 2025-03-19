@@ -49,7 +49,7 @@ fun HomeScreenMenu(
                         .verticalScroll(rememberScrollState())
                 ) {
                     Spacer(Modifier.height(12.dp))
-                    Text("My Title", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleLarge)
+                    Text("WayGo", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleLarge)
                     HorizontalDivider()
                     Button(onClick = {
                         navController.navigate("creator") {
@@ -80,35 +80,55 @@ fun HomeScreenMenu(
                     }
 
                     Spacer(Modifier.height(12.dp))
-                    Text("Section 1", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
+                    Text("Travels", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
-                        label = { Text("Viatge 1") },
+                        label = { Text("Travel 1") },
                         selected = false,
-                        onClick = { /* Handle click */ }
+                        onClick = {
+                            navController.navigate("travel1") {
+                                popUpTo("travel1") { inclusive = true } }
+                        }
                     )
                     NavigationDrawerItem(
-                        label = { Text("Viatge 2") },
+                        label = { Text("Travel 2") },
                         selected = false,
-                        onClick = { /* Handle click */ }
+                        onClick = {
+                            navController.navigate("travel2") {
+                                popUpTo("travel2") { inclusive = true } }
+                        }
                     )
 
                     HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
-                    Text("Section 2", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
+                    Text("Configuration", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
                         label = { Text("Settings") },
                         selected = false,
                         icon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                         badge = { Text("20") }, // Placeholder
-                        onClick = { /* Handle click */ }
+                        onClick = {
+                            navController.navigate("settings") {
+                                popUpTo("settings") { inclusive = true } }
+                        }
                     )
                     NavigationDrawerItem(
                         label = { Text("Help and feedback") },
                         selected = false,
                         icon = { Icon(Icons.AutoMirrored.Outlined.Help, contentDescription = null) },
-                        onClick = { /* Handle click */ },
+                        onClick = {
+                            navController.navigate("help") {
+                                popUpTo("help") { inclusive = true } }
+                        }
                     )
                     Spacer(Modifier.height(12.dp))
+
+                    Button(onClick = {
+                        navController.navigate("terms") {
+                            popUpTo("terms") { inclusive = true }
+                        }
+                    }) {
+                        Text(text = "Terms and Conditions")
+                    }
                 }
             }
         },
@@ -117,7 +137,7 @@ fun HomeScreenMenu(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Navigation Drawer Example") },
+                    title = { Text("Home") },
                     navigationIcon = {
                         IconButton(onClick = {
                             scope.launch {

@@ -21,9 +21,12 @@ import com.example.navigation.ui.screens.RegisterScreen
 import com.example.navigation.ui.screens.TermConditionsScreen
 import com.example.navigation.ui.screens.AboutScreen
 import com.example.navigation.ui.screens.CostsScreen
+import com.example.navigation.ui.screens.SettingsScreen
 import com.example.navigation.ui.screens.ToDoListScreen
 import com.example.navigation.ui.screens.TravelCreatorScreen
-
+import com.example.navigation.ui.screens.TravelScreen1
+import com.example.navigation.ui.screens.TravelScreen2
+import com.example.navigation.ui.screens.HelpScreen
 
 
 @Composable
@@ -49,6 +52,9 @@ fun NavGraph(navController: NavHostController) {
         composable("creator") { TravelCreatorScreen(navController) }
         composable("cost") { CostsScreen(navController) }
         composable("todo") { ToDoListScreen(navController) }
-
+        composable("settings") { SettingsScreen(navController) }
+        composable("travel1") { TravelScreen1(navController) }
+        composable("travel2") { TravelScreen2(navController) }
+        composable("help") { HelpScreen(navController) }
     }
 }

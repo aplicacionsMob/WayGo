@@ -41,13 +41,13 @@ fun RegisterScreen(navController: NavController) {
         OutlinedTextField(
             value = username,
             onValueChange = { username = it },
-            label = { Text("Usuari") }
+            label = { Text("User") }
         )
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Contrasenya") },
+            label = { Text("Password") },
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
@@ -55,7 +55,7 @@ fun RegisterScreen(navController: NavController) {
         OutlinedTextField(
             value = passwordConfirm,
             onValueChange = { passwordConfirm = it },
-            label = { Text("Contrasenya") },
+            label = { Text("Password") },
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
@@ -80,7 +80,7 @@ fun RegisterScreen(navController: NavController) {
             verticalAlignment = Alignment.CenterVertically // Centra verticalment el text i el botó
         ) {
 
-            Text(text = "Ja tens compte?")
+            Text(text = "Do you have an account?")
             Spacer(modifier = Modifier.width(8.dp)) // Espai entre el text i el botó
             Button(onClick = { navController.navigate("login") }) {
                 Text(text = "Login")

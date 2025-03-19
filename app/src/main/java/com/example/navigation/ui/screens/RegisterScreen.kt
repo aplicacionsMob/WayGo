@@ -7,6 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
@@ -17,6 +18,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.*
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import com.example.navigation.R
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -30,24 +32,24 @@ fun RegisterScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Register Screen")
+        Text(text = stringResource(id = R.string.register_screen))
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = mail,
             onValueChange = { mail = it },
-            label = { Text("Mail") }
+            label = { Text(stringResource(id = R.string.mail)) }
         )
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = username,
             onValueChange = { username = it },
-            label = { Text("User") }
+            label = { Text(stringResource(id = R.string.user)) }
         )
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
+            label = { Text(stringResource(id = R.string.password)) },
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
@@ -55,7 +57,7 @@ fun RegisterScreen(navController: NavController) {
         OutlinedTextField(
             value = passwordConfirm,
             onValueChange = { passwordConfirm = it },
-            label = { Text("Password") },
+            label = { Text(stringResource(id = R.string.password)) },
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
@@ -66,7 +68,7 @@ fun RegisterScreen(navController: NavController) {
                 popUpTo("register") { inclusive = true }
             }
         }) {
-            Text(text = "Register")
+            Text(text = stringResource(id = R.string.register))
         }
     }
     Box(
@@ -79,17 +81,16 @@ fun RegisterScreen(navController: NavController) {
                 .align(Alignment.BottomEnd), // Alinea el contingut a baix a la dreta
             verticalAlignment = Alignment.CenterVertically // Centra verticalment el text i el botó
         ) {
-
-            Text(text = "Do you have an account?")
+            Text(text = stringResource(id = R.string.have_account))
             Spacer(modifier = Modifier.width(8.dp)) // Espai entre el text i el botó
             Button(onClick = { navController.navigate("login") }) {
-                Text(text = "Login")
+                Text(text = stringResource(id = R.string.login))
             }
         }
         Row {
             Spacer(modifier = Modifier.width(8.dp))
             Button(onClick = { navController.navigate("terms") }) {
-                Text(text = "Term and conditions")
+                Text(text = stringResource(id = R.string.terms_and_conditions))
             }
         }
     }

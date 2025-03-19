@@ -7,6 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
@@ -17,6 +18,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.*
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import com.example.navigation.R
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -28,18 +30,18 @@ fun LoginScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Login Screen")
+        Text(text = stringResource(id = R.string.login_screen))
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = username,
             onValueChange = { username = it },
-            label = { Text("User") }
+            label = { Text(stringResource(id = R.string.user)) }
         )
         Spacer(modifier = Modifier.height(20.dp))
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
+            label = { Text(stringResource(id = R.string.password)) },
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
@@ -50,7 +52,7 @@ fun LoginScreen(navController: NavController) {
                 popUpTo("login") { inclusive = true }
             }
         }) {
-            Text(text = "Login")
+            Text(text = stringResource(id = R.string.login))
         }
     }
     Box(
@@ -63,10 +65,10 @@ fun LoginScreen(navController: NavController) {
                 .align(Alignment.BottomEnd), // Alinea el contingut a baix a la dreta
             verticalAlignment = Alignment.CenterVertically // Centra verticalment el text i el botó
         ) {
-            Text(text = "Don't have an account?")
+            Text(text = stringResource(id = R.string.dont_have_account))
             Spacer(modifier = Modifier.width(8.dp)) // Espai entre el text i el botó
             Button(onClick = { navController.navigate("register") }) {
-                Text(text = "Register")
+                Text(text = stringResource(id = R.string.register))
             }
         }
     }

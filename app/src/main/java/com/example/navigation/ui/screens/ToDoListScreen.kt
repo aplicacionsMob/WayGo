@@ -9,8 +9,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun ToDoListScreen(navController: NavController) {
@@ -24,13 +26,13 @@ fun ToDoListScreen(navController: NavController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "To-Do List")
+        Text(text = stringResource(id = R.string.todo_list))
         Spacer(modifier = Modifier.height(20.dp))
 
         OutlinedTextField(
             value = newTask,
             onValueChange = { newTask = it },
-            label = { Text("New Task") },
+            label = { Text(stringResource(id = R.string.new_task)) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -41,11 +43,11 @@ fun ToDoListScreen(navController: NavController) {
                 newTask = ""
             }
         }) {
-            Text(text = "Add Task")
+            Text(text = stringResource(id = R.string.add_task))
         }
         Spacer(modifier = Modifier.height(20.dp))
 
-        LazyColumn { //TODO fer que es pugui borrar una tasca, tatxar-la, que tingui decoració i que no estigui al centre
+        LazyColumn {
             items(tasks) { task ->
                 Text(text = task, modifier = Modifier.padding(8.dp))
             }
@@ -55,7 +57,7 @@ fun ToDoListScreen(navController: NavController) {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

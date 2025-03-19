@@ -7,8 +7,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun HelpScreen(navController: NavController) {
@@ -21,28 +23,28 @@ fun HelpScreen(navController: NavController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Help and Feedback")
+        Text(text = stringResource(id = R.string.help_and_feedback))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Help Topics")
+        Text(text = stringResource(id = R.string.help_topics))
         Spacer(modifier = Modifier.height(10.dp))
 
-        Text(text = "1. How to use the app")
+        Text(text = stringResource(id = R.string.how_to_use_app))
         Spacer(modifier = Modifier.height(10.dp))
 
-        Text(text = "2. Account settings")
+        Text(text = stringResource(id = R.string.account_settings))
         Spacer(modifier = Modifier.height(10.dp))
 
-        Text(text = "3. Privacy policy")
+        Text(text = stringResource(id = R.string.privacy_policy))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Feedback")
+        Text(text = stringResource(id = R.string.feedback))
         Spacer(modifier = Modifier.height(10.dp))
 
         OutlinedTextField(
             value = feedback,
             onValueChange = { feedback = it },
-            label = { Text("Your Feedback") },
+            label = { Text(stringResource(id = R.string.your_feedback)) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -50,14 +52,14 @@ fun HelpScreen(navController: NavController) {
         Button(onClick = {
             // Handle feedback submission
         }) {
-            Text(text = "Submit Feedback")
+            Text(text = stringResource(id = R.string.submit_feedback))
         }
         Button(onClick = {
             navController.navigate("home") {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

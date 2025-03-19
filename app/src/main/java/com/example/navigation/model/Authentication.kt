@@ -4,15 +4,15 @@ data class Authentication(
     val email: String,
     val password: String
 ) {
+    //@TODO fer la simulació d'autenticació
     fun login() {
-        // Simulació d'autenticació
     }
 
+    //@TODO tanca la sessió
     fun logout() {
-        // Tancar sessió
     }
 
+    //@TODO enviar email de reset de contrasenya
     fun resetPassword() {
-        // Enviar email de reset de contrasenya
     }
 }

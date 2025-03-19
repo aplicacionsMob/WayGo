@@ -6,11 +6,12 @@ data class AIRecommendations(
     val suggestedActivity: String,
     val rating: Double
 ) {
+
+    //@TODO connectar amnb una API
     fun generateRecommendations() {
-        // Aquí es podria connectar amb una IA o API
     }
 
+    //@TODO actualitzar la puntuació
     fun rateRecommendation(newRating: Double) {
-        // Actualitzar la puntuació
     }
 }

@@ -1,10 +1,8 @@
 package com.example.navigation.model
 
-import java.util.Date
-
 data class ItineraryItem(
     val id: String,
-    val description: String,
-    val date: Date,
-    val location: String
+    var description: String,
+    var date: String, // Es podria canviar a Date
+    var location: String
 )

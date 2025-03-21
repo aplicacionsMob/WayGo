@@ -11,5 +11,3 @@ data class Trip(
     val itinerary: List<ItineraryItem> = emptyList(),
     val photos: List<Photo> = emptyList()
 )
-
-//sprint2

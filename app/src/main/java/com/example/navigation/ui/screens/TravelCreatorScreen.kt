@@ -7,8 +7,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun TravelCreatorScreen(navController: NavController) {
@@ -24,20 +26,20 @@ fun TravelCreatorScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Create a Trip")
+        Text(text = stringResource(id = R.string.create_trip))
         Spacer(modifier = Modifier.height(20.dp))
 
         OutlinedTextField(
             value = tripName,
             onValueChange = { tripName = it },
-            label = { Text("Trip Name") }
+            label = { Text(stringResource(id = R.string.trip_name)) }
         )
         Spacer(modifier = Modifier.height(20.dp))
 
         OutlinedTextField(
             value = destinations,
             onValueChange = { destinations = it },
-            label = { Text("Destinations") }
+            label = { Text(stringResource(id = R.string.destinations)) }
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -45,7 +47,7 @@ fun TravelCreatorScreen(navController: NavController) {
         OutlinedTextField(
             value = travelDates,
             onValueChange = { travelDates = it },
-            label = { Text("Travel Dates") }
+            label = { Text(stringResource(id = R.string.travel_dates)) }
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -53,7 +55,7 @@ fun TravelCreatorScreen(navController: NavController) {
         OutlinedTextField(
             value = participants,
             onValueChange = { participants = it },
-            label = { Text("Participants") }
+            label = { Text(stringResource(id = R.string.participants)) }
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -61,7 +63,7 @@ fun TravelCreatorScreen(navController: NavController) {
         Button(onClick = { navController.navigate("home") {
             popUpTo("saveTrip") { inclusive = true }
         } }) {
-            Text(text = "Save Trip")
+            Text(text = stringResource(id = R.string.save_trip))
         }
 
         Button(onClick = {
@@ -69,7 +71,7 @@ fun TravelCreatorScreen(navController: NavController) {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

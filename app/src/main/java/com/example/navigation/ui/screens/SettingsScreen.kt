@@ -8,8 +8,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun SettingsScreen(navController: NavController) {
@@ -25,13 +27,13 @@ fun SettingsScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Settings")
+        Text(text = stringResource(id = R.string.settings))
         Spacer(modifier = Modifier.height(20.dp))
 
         OutlinedTextField(
             value = selectedLanguage,
             onValueChange = { selectedLanguage = it },
-            label = { Text("Select Language") },
+            label = { Text(stringResource(id = R.string.select_language)) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -40,7 +42,7 @@ fun SettingsScreen(navController: NavController) {
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(text = "Enable Notifications")
+            Text(text = stringResource(id = R.string.enable_notifications))
             Spacer(modifier = Modifier.weight(1f))
             Switch(
                 checked = notificationsEnabled,
@@ -52,7 +54,7 @@ fun SettingsScreen(navController: NavController) {
         OutlinedTextField(
             value = selectedTheme,
             onValueChange = { selectedTheme = it },
-            label = { Text("Select Theme") },
+            label = { Text(stringResource(id = R.string.select_theme)) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -60,7 +62,7 @@ fun SettingsScreen(navController: NavController) {
         OutlinedTextField(
             value = fontSize,
             onValueChange = { fontSize = it },
-            label = { Text("Font Size") },
+            label = { Text(stringResource(id = R.string.font_size)) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -68,7 +70,7 @@ fun SettingsScreen(navController: NavController) {
         Button(onClick = {
             // Handle save settings action
         }) {
-            Text(text = "Save Settings")
+            Text(text = stringResource(id = R.string.save_settings))
         }
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -78,7 +80,7 @@ fun SettingsScreen(navController: NavController) {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

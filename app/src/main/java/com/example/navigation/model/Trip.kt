@@ -1,13 +1,27 @@
-package com.example.navigation.model
+package com.example.waygo.model
 
-import java.util.Date
+import com.example.navigation.model.ItineraryItem
 
 data class Trip(
     val id: String,
-    val destination: String,
-    val startDate: Date,
-    val endDate: Date,
-    val budget: Double,
-    val itinerary: List<ItineraryItem> = emptyList(),
-    val photos: List<Photo> = emptyList()
-)
+    var destination: String,
+    var startDate: String, // Es podria canviar a Date si es treballa amb dates
+    var endDate: String,
+    var budget: Double,
+    val itinerary: MutableList<ItineraryItem> = mutableListOf()
+) {
+    fun addItineraryItem(item: ItineraryItem) {
+        itinerary.add(item)
+    }
+
+    fun removeItineraryItem(itemId: String) {
+        itinerary.removeIf { it.id == itemId }
+    }
+
+    fun updateTripDetails(newDestination: String, newStartDate: String, newEndDate: String, newBudget: Double) {
+        destination = newDestination
+        startDate = newStartDate
+        endDate = newEndDate
+        budget = newBudget
+    }
+}

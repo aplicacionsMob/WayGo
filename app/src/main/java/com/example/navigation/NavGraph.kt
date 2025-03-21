@@ -13,7 +13,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.navigation.ui.screens.Content1
-import com.example.navigation.ui.screens.HomeScreen
 import com.example.navigation.ui.screens.HomeScreenMenu
 import com.example.navigation.ui.screens.LoginScreen
 import com.example.navigation.ui.screens.ProfileScreen
@@ -36,16 +35,8 @@ fun NavGraph(navController: NavHostController) {
         composable("home") { HomeScreenMenu(navController) { innerPadding ->
             Content1(navController, innerPadding)
         }}
-        composable("profile") { ProfileScreen(navController, null) }
-        composable("profile/{id}",
-                arguments = listOf(navArgument("id"){
-                            type = NavType.IntType
-                })
-        ) {
-            var userId = it.arguments?.getInt("id") ?: -1
-            ProfileScreen(navController, userId)
-        }
-        composable("profileMenu") { ProfileScreen(navController, null) }
+        composable("profile") { ProfileScreen(navController) }
+        composable("profileMenu") { ProfileScreen(navController) }
         composable("register") { RegisterScreen(navController) }
         composable("terms") { TermConditionsScreen(navController) }
         composable("about") { AboutScreen(navController) }

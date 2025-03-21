@@ -25,12 +25,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.google.rpc.Help
 import kotlinx.coroutines.launch
-
+import com.example.navigation.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -49,14 +50,14 @@ fun HomeScreenMenu(
                         .verticalScroll(rememberScrollState())
                 ) {
                     Spacer(Modifier.height(12.dp))
-                    Text("WayGo", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleLarge)
+                    Text(text = stringResource(id = R.string.app_name), modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleLarge)
                     HorizontalDivider()
                     Button(onClick = {
                         navController.navigate("creator") {
                             popUpTo("creator") { inclusive = true }
                         }
                     }) {
-                        Text(text = "Travel Creator")
+                        Text(text = stringResource(id = R.string.travel_creator))
                     }
 
                     Spacer(Modifier.height(12.dp))
@@ -66,7 +67,7 @@ fun HomeScreenMenu(
                             popUpTo("cost") { inclusive = true }
                         }
                     }) {
-                        Text(text = "Cost Estimation")
+                        Text(text = stringResource(id = R.string.cost_estimation))
                     }
 
                     Spacer(Modifier.height(12.dp))
@@ -76,13 +77,13 @@ fun HomeScreenMenu(
                             popUpTo("todo") { inclusive = true }
                         }
                     }) {
-                        Text(text = "To-Do List")
+                        Text(text = stringResource(id = R.string.todo_list))
                     }
 
                     Spacer(Modifier.height(12.dp))
-                    Text("Travels", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
+                    Text(text = stringResource(id = R.string.travels), modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
-                        label = { Text("Travel 1") },
+                        label = { Text(text = stringResource(id = R.string.travel_1)) },
                         selected = false,
                         onClick = {
                             navController.navigate("travel1") {
@@ -90,7 +91,7 @@ fun HomeScreenMenu(
                         }
                     )
                     NavigationDrawerItem(
-                        label = { Text("Travel 2") },
+                        label = { Text(text = stringResource(id = R.string.travel_2)) },
                         selected = false,
                         onClick = {
                             navController.navigate("travel2") {
@@ -100,9 +101,9 @@ fun HomeScreenMenu(
 
                     HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
-                    Text("Configuration", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
+                    Text(text = stringResource(id = R.string.configuration), modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.titleMedium)
                     NavigationDrawerItem(
-                        label = { Text("Settings") },
+                        label = { Text(text = stringResource(id = R.string.settings)) },
                         selected = false,
                         icon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                         badge = { Text("20") }, // Placeholder
@@ -112,7 +113,7 @@ fun HomeScreenMenu(
                         }
                     )
                     NavigationDrawerItem(
-                        label = { Text("Help and feedback") },
+                        label = { Text(text = stringResource(id = R.string.help_and_feedback)) },
                         selected = false,
                         icon = { Icon(Icons.AutoMirrored.Outlined.Help, contentDescription = null) },
                         onClick = {
@@ -127,7 +128,7 @@ fun HomeScreenMenu(
                             popUpTo("terms") { inclusive = true }
                         }
                     }) {
-                        Text(text = "Terms and Conditions")
+                        Text(text = stringResource(id = R.string.terms_and_conditions))
                     }
                 }
             }
@@ -137,7 +138,7 @@ fun HomeScreenMenu(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Home") },
+                    title = { Text(text = stringResource(id = R.string.home)) },
                     navigationIcon = {
                         IconButton(onClick = {
                             scope.launch {
@@ -158,4 +159,3 @@ fun HomeScreenMenu(
         }
     }
 }
-

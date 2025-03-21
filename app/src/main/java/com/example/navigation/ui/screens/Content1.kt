@@ -14,8 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun Content1(navController: NavController, paddingValues: PaddingValues) {
@@ -33,7 +35,7 @@ fun Content1(navController: NavController, paddingValues: PaddingValues) {
                 // Navigate to the Register screen
                 navController.navigate("about")
             }) {
-                Text(text = "About Us")
+                Text(text = stringResource(id = R.string.about_us))
             }
         }
     }
@@ -46,10 +48,10 @@ fun Content1(navController: NavController, paddingValues: PaddingValues) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Welcome to Home")
+            Text(text = stringResource(id = R.string.welcome))
             Spacer(modifier = Modifier.height(20.dp))
             Button(onClick = { navController.navigate(route="profile")}) {
-                Text(text = "Go to Profile")
+                Text(text = stringResource(id = R.string.profile))
             }
         }
     }

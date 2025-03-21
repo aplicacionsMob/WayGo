@@ -11,4 +11,16 @@ data class User(
     val following: Int = 0,
     val uploadedRoutes: Int = 0,
     val totalLikes: Int = 0
-)
+) {
+    fun register() {
+        // Aquí aniria la lògica de registre (ex. crida a una API o Firebase)
+    }
+
+    fun login(email: String, password: String) {
+        // Lògica d'autenticació
+    }
+
+    fun logout() {
+        // Destruir sessió de l'usuari
+    }
+}

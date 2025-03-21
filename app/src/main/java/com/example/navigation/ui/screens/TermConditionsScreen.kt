@@ -6,8 +6,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun TermConditionsScreen(navController: NavController) {
@@ -18,12 +20,12 @@ fun TermConditionsScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Terms and Conditions")
+        Text(text = stringResource(id = R.string.terms_and_conditions))
         Spacer(modifier = Modifier.height(20.dp))
-        Text(text = "Here are the terms and conditions...")
+        Text(text = stringResource(id = R.string.terms_content))
         Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = { navController.popBackStack() }) {
-            Text(text = "Accept")
+            Text(text = stringResource(id = R.string.accept))
         }
     }
 }

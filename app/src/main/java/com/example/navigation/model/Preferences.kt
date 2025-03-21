@@ -1,8 +1,20 @@
 package com.example.navigation.model
 
+
 data class Preferences(
     val id: String,
-    val notificationsEnabled: Boolean = true,
-    val preferredLanguage: String = "en",
-    val theme: String = "light"
-)
+    var notificationsEnabled: Boolean,
+    var preferredLanguage: String,
+    var theme: String
+) {
+    fun updatePreferences(newNotificationsEnabled: Boolean, newLanguage: String, newTheme: String) {
+        notificationsEnabled = newNotificationsEnabled
+        preferredLanguage = newLanguage
+        theme = newTheme
+    }
+
+    fun getPreferences(): String {
+        return "Notifications: $notificationsEnabled, Language: $preferredLanguage, Theme: $theme"
+    }
+}
+

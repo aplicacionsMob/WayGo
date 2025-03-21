@@ -6,8 +6,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 @Composable
 fun AboutScreen(navController: NavController) {
@@ -18,22 +20,22 @@ fun AboutScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "About Us")
+        Text(text = stringResource(id = R.string.about_us))
         Spacer(modifier = Modifier.height(20.dp))
-        Text(text = "Team Info:")
-        Text(text = "Nígel Boada, Martí Farran")
+        Text(text = stringResource(id = R.string.team_info))
+        Text(text = stringResource(id = R.string.team_members))
         Spacer(modifier = Modifier.height(20.dp))
-        Text(text = "Version: 1.0.0")
+        Text(text = stringResource(id = R.string.version))
         Spacer(modifier = Modifier.height(20.dp))
-        Text(text = "Summary:")
-        Text(text = "WayGo is a travel application designed to facilitate trip planning and management for users. With an intuitive interface and innovative features, WayGo offers an optimized experience for adventurers.")
+        Text(text = stringResource(id = R.string.summary))
+        Text(text = stringResource(id = R.string.app_summary))
         Spacer(modifier = Modifier.height(20.dp))
         Button(onClick = {
             navController.navigate("home") {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

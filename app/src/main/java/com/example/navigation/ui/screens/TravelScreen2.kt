@@ -8,8 +8,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.navigation.R
 
 data class Travel2(
     val tripName: String,
@@ -36,13 +38,13 @@ fun TravelScreen2(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Trip Details")
+        Text(text = stringResource(id = R.string.trip_details))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Trip Name: ${travel.tripName}")
+        Text(text = stringResource(id = R.string.trip_name, travel.tripName))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Destinations:")
+        Text(text = stringResource(id = R.string.destinations))
         LazyColumn {
             items(travel.destinations) { destination ->
                 Text(text = destination, modifier = Modifier.padding(8.dp))
@@ -50,13 +52,13 @@ fun TravelScreen2(navController: NavController) {
         }
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Start Date: ${travel.startDate}")
+        Text(text = stringResource(id = R.string.start_date, travel.startDate))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "End Date: ${travel.endDate}")
+        Text(text = stringResource(id = R.string.end_date, travel.endDate))
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Participants:")
+        Text(text = stringResource(id = R.string.participants))
         LazyColumn {
             items(travel.participants) { participant ->
                 Text(text = participant, modifier = Modifier.padding(8.dp))
@@ -67,7 +69,7 @@ fun TravelScreen2(navController: NavController) {
                 popUpTo("back") { inclusive = true }
             }
         }) {
-            Text(text = "Back")
+            Text(text = stringResource(id = R.string.back))
         }
     }
 }

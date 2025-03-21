@@ -1,10 +1,14 @@
 package com.example.navigation.model
 
-import java.util.Date
-
 data class ItineraryItem(
     val id: String,
-    val description: String,
-    val date: Date,
-    val location: String
-)
+    var description: String,
+    var date: String, // També es podria usar Date
+    var location: String
+) {
+    fun updateItemDetails(newDescription: String, newDate: String, newLocation: String) {
+        description = newDescription
+        date = newDate
+        location = newLocation
+    }
+}

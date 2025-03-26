@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Navegació</string>
+    <string name="app_name">WayGo</string>
     <string name="settings">Configuració</string>
     <string name="select_language">Selecciona idioma</string>
     <string name="enable_notifications">Activa les notificacions</string>
@@ -30,10 +30,10 @@
     <string name="about_us">Sobre nosaltres</string>
     <string name="team_info">Informació de l\'equip:</string>
     <string name="team_members">Nígel Boada, Martí Farran</string>
-    <string name="version">Versió: 1.0.0</string>
+    <string name="version">Versió: 0.1.0</string>
     <string name="summary">Resum:</string>
-    <string name="app_summary">WayGo és una aplicació de viatges dissenyada per facilitar la planificació i gestió de viatges per als usuaris. Amb una interfície intuïtiva i característiques innovadores, WayGo ofereix una experiència optimitzada per als aventurers.</string>
-    <string name="back">Enrere</string>
+    <string name="app_summary">WayGo és una aplicació de viatges dissenyada per facilitar la planificació i gestió de viatges per als usuaris. Amb una interfície intuïtiva i característiques innovadores, WayGo ofereix una experiència optimitzada per als usuaris més aventurers.</string>
+    <string name="back">Tornar</string>
     <string name="welcome">Benvingut</string>
     <string name="profile">Ves al perfil</string>
     <string name="budget_expenses">Pressupost i Despeses</string>
@@ -62,7 +62,7 @@
     <string name="register_screen">Pantalla de Registre</string>
     <string name="mail">Correu</string>
     <string name="have_account">Tens un compte?</string>
-    <string name="terms_content">Aquí estan els termes i condicions...</string>
+    <string name="terms_content">Aquí estan els termes i condicions…</string>
     <string name="accept">Acceptar</string>
     <string name="new_task">Nova Tasca</string>
     <string name="add_task">Afegeix Tasca</string>

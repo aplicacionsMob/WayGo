@@ -1,5 +1,7 @@
 package com.example.waygo.ui.screens
 
+import com.example.waygo.R
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text

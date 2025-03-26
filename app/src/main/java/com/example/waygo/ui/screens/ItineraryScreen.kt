@@ -1,5 +1,12 @@
 package com.example.waygo.ui.screens
 
+import androidx.lifecycle.viewmodel.compose.viewModel //solució per a l'error: Expression 'viewModel' of type 'ItineraryViewModel' cannot be invoked as a function. The function 'invoke()' is not found
+
+//aquests 3 imports son per convertir un String a Date
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.Date
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,12 +25,17 @@ fun ItineraryScreen(viewModel: ItineraryViewModel = viewModel()) {
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         Button(onClick = {
+
+            //afegim aquesta línia per a poder convertir un String a Date
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
             val newActivity = ItineraryItem(
                 id = UUID.randomUUID().toString(),
                 description = "Nova Activitat",
-                date = "2025-01-01",
+                date = dateFormat.parse("2025-01-01")!!, // Converteix String a Date
                 location = "Barcelona"
             )
+
 
         }) {
             Text("Afegir Activitat")

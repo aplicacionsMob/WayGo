@@ -1,5 +1,6 @@
 package com.example.waygo.ui.screens
 
+//import per a solucionar l'error unresolved reference 'string'
 import com.example.waygo.R
 
 import androidx.compose.foundation.layout.*

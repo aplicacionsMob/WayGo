@@ -1,5 +1,10 @@
 package com.example.waygo.ui.screens
 
+import androidx.lifecycle.viewmodel.compose.viewModel
+
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.Date
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -19,13 +24,16 @@ fun TripsScreen(viewModel: TripViewModel = viewModel()) {
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         Button(onClick = {
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
             val newTrip = Trip(
                 id = UUID.randomUUID().toString(),
                 destination = "Nova Destinació",
-                startDate = "2025-01-01",
-                endDate = "2025-01-10",
+                startDate = dateFormat.parse("2025-01-01")!!, // Converteix String a Date
+                endDate = dateFormat.parse("2025-01-10")!!, // Converteix String a Date
                 budget = 1500.0
             )
+
             viewModel.addTrip(newTrip)
         }) {
             Text("Afegir Viatge")

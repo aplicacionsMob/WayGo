@@ -1,4 +1,4 @@
-package com.example.WayGo.data.local.entity
+package com.example.waygo.data.local.entity
 
 class TaskEntity {
 }

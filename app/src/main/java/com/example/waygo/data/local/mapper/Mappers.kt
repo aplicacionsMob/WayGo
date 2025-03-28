@@ -1,2 +1,2 @@
-package com.example.WayGo.data.local.mapper
+package com.example.waygo.data.local.mapper
 

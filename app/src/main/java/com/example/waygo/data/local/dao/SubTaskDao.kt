@@ -1,4 +1,4 @@
-package com.example.WayGo.data.local.dao
+package com.example.waygo.data.local.dao
 
 interface SubTaskDao {
 }

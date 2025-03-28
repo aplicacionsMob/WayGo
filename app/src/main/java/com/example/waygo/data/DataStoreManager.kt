@@ -1,2 +1,2 @@
-package com.example.WayGo.data
+package com.example.waygo.data
 

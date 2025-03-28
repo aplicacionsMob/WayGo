@@ -7,7 +7,5 @@ data class Trip(
     val destination: String,
     val startDate: Date,
     val endDate: Date,
-    val budget: Double,
-    val itinerary: List<ItineraryItem> = emptyList(),
-    val photos: List<Photo> = emptyList()
+    val budget: Double
 )

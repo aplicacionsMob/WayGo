@@ -1,5 +1,9 @@
 package com.example.waygo.ui.screens
 
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -11,36 +15,39 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.waygo.model.Trip
 import com.example.waygo.viewmodel.TripViewModel
-import java.util.UUID
 
 @Composable
-fun TripsScreen(viewModel: TripViewModel = viewModel()) {
+fun TripsScreen(viewModel: TripViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
     val trips by viewModel.trips.collectAsState()
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         Button(onClick = {
-            val newTrip = Trip(
-                id = UUID.randomUUID().toString(),
-                destination = "Nova Destinació",
-                startDate = "2025-01-01",
-                endDate = "2025-01-10",
-                budget = 1500.0
-            )
-            viewModel.addTrip(newTrip)
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val startDateParsed = dateFormat.parse("2025-01-01") ?: Date()
+            val endDateParsed = dateFormat.parse("2025-01-10") ?: Date()
+
+            val startDateString = dateFormat.format(startDateParsed)
+            val endDateString = dateFormat.format(endDateParsed)
+
+            viewModel.addTrip("Nova Destinació", startDateString, endDateString, 1500.0)
         }) {
             Text("Afegir Viatge")
         }
 
+
         LazyColumn {
             items(trips) { trip ->
-                TripItem(trip, onDelete = { viewModel.deleteTrip(trip.id) })
+                TripItem(trip,
+                    onDelete = { viewModel.deleteTrip(trip.id) },
+                    onEdit = { viewModel.editTrip(trip.id, "Actualitzat", "2025-07-01", "2025-07-15", 1500.0) }
+                )
             }
         }
     }
 }
 
 @Composable
-fun TripItem(trip: Trip, onDelete: () -> Unit) {
+fun TripItem(trip: Trip, onDelete: () -> Unit, onEdit: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
@@ -51,7 +58,7 @@ fun TripItem(trip: Trip, onDelete: () -> Unit) {
             Text(text = "Pressupost: ${trip.budget}€", style = MaterialTheme.typography.bodyMedium)
 
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("✏️ Edita", modifier = Modifier.clickable { /* Implementa editar */ })
+                Text("✏️ Edita", modifier = Modifier.clickable { onEdit() })
                 Text("🗑️ Elimina", modifier = Modifier.clickable { onDelete() })
             }
         }

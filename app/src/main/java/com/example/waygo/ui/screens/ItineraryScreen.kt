@@ -5,7 +5,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel //solució per a l'error: 
 //aquests 3 imports son per convertir un String a Date
 import java.text.SimpleDateFormat
 import java.util.Locale
-import java.util.Date
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*

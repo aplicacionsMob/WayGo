@@ -1,4 +1,4 @@
-package com.example.waygo.domain.model.repository
+package com.example.waygo.domain.repository
 
 import com.example.waygo.domain.model.ItineraryItem
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -9,7 +9,7 @@ class ItineraryRepository {
     val itineraryItems: StateFlow<List<ItineraryItem>> get() = _itineraryItems
 
     fun addActivity(activity: ItineraryItem) {
-        _itineraryItems.value = _itineraryItems.value + activity
+        _itineraryItems.value += activity
     }
 
     fun updateActivity(updatedActivity: ItineraryItem) {

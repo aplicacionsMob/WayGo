@@ -5,20 +5,20 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.waygo.ui.screens.Content1
-import com.example.waygo.ui.screens.HomeScreenMenu
-import com.example.waygo.ui.screens.LoginScreen
-import com.example.waygo.ui.screens.ProfileScreen
-import com.example.waygo.ui.screens.RegisterScreen
-import com.example.waygo.ui.screens.TermConditionsScreen
-import com.example.waygo.ui.screens.AboutScreen
-import com.example.waygo.ui.screens.CostsScreen
-import com.example.waygo.ui.screens.SettingsScreen
-import com.example.waygo.ui.screens.ToDoListScreen
-import com.example.waygo.ui.screens.TravelCreatorScreen
-import com.example.waygo.ui.screens.TravelScreen1
-import com.example.waygo.ui.screens.TravelScreen2
-import com.example.waygo.ui.screens.HelpScreen
+import com.example.waygo.ui.view.Content1
+import com.example.waygo.ui.view.HomeScreenMenu
+import com.example.waygo.ui.view.LoginScreen
+import com.example.waygo.ui.view.ProfileScreen
+import com.example.waygo.ui.view.RegisterScreen
+import com.example.waygo.ui.view.TermConditionsScreen
+import com.example.waygo.ui.view.AboutScreen
+import com.example.waygo.ui.view.CostsScreen
+import com.example.waygo.ui.view.SettingsScreen
+import com.example.waygo.ui.view.ToDoListScreen
+import com.example.waygo.ui.view.TravelCreatorScreen
+import com.example.waygo.ui.view.TravelScreen1
+import com.example.waygo.ui.view.TravelScreen2
+import com.example.waygo.ui.view.HelpScreen
 
 
 @Composable

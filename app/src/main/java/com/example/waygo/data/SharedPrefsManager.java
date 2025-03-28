@@ -1,4 +1,4 @@
-package com.example.WayGo.data;
+package com.example.waygo.data;
 
 public class SharedPrefsManager {
 }

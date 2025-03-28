@@ -1,4 +1,4 @@
-package com.example.WayGo.data.local;
+package com.example.waygo.data.local;
 
 public class AppDatabase {
 }

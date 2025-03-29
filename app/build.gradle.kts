@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.localpreferences"
+    namespace = "com.example.waygo"
     compileSdk = 35
 
     defaultConfig {
@@ -49,6 +49,29 @@ android {
 }
 
 dependencies {
+
+    implementation ("androidx.core:core-ktx:1.12.0")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation ("androidx.activity:activity-compose:1.7.2")
+    implementation ("androidx.navigation:navigation-compose:2.7.2")
+    implementation ("androidx.compose.material3:material3:1.1.2")
+
+
+    // Jetpack Compose
+    implementation ("androidx.compose.ui:ui:1.6.0")
+    implementation ("androidx.compose.material3:1.2.0")
+
+    // Navigation per Jetpack Compose
+    implementation ("androidx.navigation:navigation-compose:2.7.5")
+
+    // Hilt per la injecció de dependències
+    implementation ("com.google.dagger:hilt-android:2.50")
+    kapt ("com.google.dagger:hilt-android-compiler:2.50")
+
+    // Per recordar l'estat de la navegació
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

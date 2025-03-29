@@ -1,4 +1,4 @@
-package com.example.waygo.ui.theme
+package com.example.waygo.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -1,0 +1,25 @@
+package com.example.waygo.navigation
+
+sealed class Screen(val route: String) {
+    object Home : Screen("home")
+    object About : Screen("about")
+    object Content1 : Screen("content1")
+    object Costs : Screen("costs")
+    object FormValidation : Screen("form_validation")
+    object Help : Screen("help")
+    object Home3 : Screen("home3")
+    object Itinerary : Screen("itinerary")
+    object Login : Screen("login")
+    object Profile : Screen("profile")
+    object Register : Screen("register")
+    object Settings : Screen("settings")
+    object Subtask : Screen("subtask")
+    object SubtaskSimple : Screen("subtask_simple")
+    object TermsConditions : Screen("terms_conditions")
+    object ToDoList : Screen("todo_list")
+    object TravelCreator : Screen("travel_creator")
+    object Travel1 : Screen("travel1")
+    object Travel2 : Screen("travel2")
+    object Trips : Screen("trips")
+    object Version : Screen("version")
+}

@@ -1,12 +1,12 @@
 package com.example.waygo.navigation
 
 sealed class Screen(val route: String) {
-    data object Home : Screen("home")
-    data object About : Screen("about")
-    data object Login : Screen("login")
-    data object Profile : Screen("profile")
-    data object Settings : Screen("settings")
-    data object Version : Screen("version")
-    data object Trip : Screen("trip")
-    data object Itinerary : Screen("itinerary")
+    object Home : Screen("home")
+    object About : Screen("about")
+    object Login : Screen("login")
+    object Profile : Screen("profile")
+    object Settings : Screen("settings")
+    object Version : Screen("version")
+    object Trip : Screen("trip")
+    object Itinerary : Screen("itinerary")
 }

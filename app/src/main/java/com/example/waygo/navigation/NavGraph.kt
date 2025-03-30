@@ -1,15 +1,22 @@
 package com.example.waygo.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.example.waygo.ui.screens.*
+import androidx.navigation.compose.composable
+
+import com.example.waygo.ui.screens.AboutScreen
+import com.example.waygo.ui.screens.LoginScreen
+import com.example.waygo.ui.screens.ProfileScreen
+import com.example.waygo.ui.screens.SettingsScreen
+import com.example.waygo.ui.screens.VersionScreen
+import com.example.waygo.ui.screens.HomeScreen
+import com.example.waygo.ui.screens.TripScreen
+import com.example.waygo.ui.screens.ItineraryScreen
+
 
 @Composable
-fun NavGraph(navController: NavController) {
+fun NavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Screen.Home.route) {
         composable(Screen.Home.route) { HomeScreen(navController) }
         composable(Screen.About.route) { AboutScreen(navController) }
